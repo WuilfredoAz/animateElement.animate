@@ -1,0 +1,228 @@
+@font-face {
+	font-family: 'icomoon';
+	src:  url('../fonts/icomoon.eot?94oxw4');
+	src:  url('../fonts/icomoon.eot?94oxw4#iefix') format('embedded-opentype'),
+	  url('../fonts/icomoon.ttf?94oxw4') format('truetype'),
+	  url('../fonts/icomoon.woff?94oxw4') format('woff'),
+	  url('../fonts/icomoon.svg?94oxw4#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+  }
+
+  [class^="icon-"], [class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon-forwards:before {
+	content: "\e901";
+  }
+  .icon-reverse:before {
+	content: "\e900";
+  }
+  .icon-play:before {
+	content: "\ea1c";
+  }
+  .icon-pause:before {
+	content: "\ea1d";
+  }
+  .icon-stop:before {
+	content: "\ea1e";
+  }
+  .icon-disminuir:before {
+	content: "\ea1f";
+  }
+  .icon-aumentar:before {
+	content: "\ea20";
+  }
+  .icon-instagram:before {
+	content: "\ea92";
+  }
+  .icon-github:before {
+	content: "\eab0";
+  }
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+.contenedor
+{
+	height: 100vh;
+	background-color: #90c3b2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.tocadisco
+{
+	/* border: 1px solid black; */
+	position: relative;
+	/* Tamaño de fuente que regula absolutamente todo el tocadisco */
+	font-size: 12px;
+}
+
+.tocadisco_cuerpo
+{
+	height: 40.625em; /*650/16=40.625em*/
+	width: 50em; /*800/16= 50em */
+}
+
+.tocadisco_disco
+{
+	position: absolute;
+	top: 5em; /* 80 / 16 = 5em */
+	left: 6.5625em; /* 105 / 16= 6.5625em*/
+	height: 31.875em;/*510 / 16 = 31.875em*/
+	width: 31.9375em;/*511 / 16= 31.9375em*/
+	/* Para que gire alrededor */
+	transform-origin: center;
+}
+
+.tocadisco_aguja
+{
+	position: absolute;
+	top: 2.8125em; /* 45 / 16 = 2.8125em*/
+	right: 5.75em; /*92 / 16 = 5.75em*/
+	height: 27.5em; /*440 / 16 = 27.5em*/
+	width: 3.75em; /* 60 / 16 = 3.75em*/
+	/* Para cuando al girar se vea bien */
+	transform-origin: center 7.5em; /* X Y (Y=120/16=7.5em)*/
+}
+
+.botonera-right
+{
+	position: absolute;
+	bottom: 2.5em; /*40 / 16 = 2.5em*/
+	right: 2.5em; /*40 / 16 = 2.5em*/
+}
+
+.botonera-left
+{
+	position: absolute;
+	left: 2.5em; /*40 / 16 = 2.5em*/
+	bottom: 2.5em; /*40 / 16 = 2.5em*/
+}
+
+.btn
+{
+	padding: .8em 1em;
+	border: none;
+	outline: 0;
+	background-color: #d1d1b9;
+	box-shadow: inset 0 -0.2em rgba(0,0,0, .5);
+	border-radius: 10px;
+	text-align: center;
+	transition: scale .2s;
+}
+
+.botonera-right button
+{
+	font-size: 1.2em;
+	margin-left: .5em;
+}
+
+.botonera-right button:first-child
+{
+	margin-left: 0;
+}
+
+.botonera-left button
+{
+	border-radius: 50%;
+	padding: 1em;
+	font-size: 1em;
+}
+
+.btn:active
+{
+	transform: scale(.9);
+	box-shadow: none;
+}
+
+.pantalla
+{
+	background-color: #262626;
+	color: #ed3a24;
+	font-size: 2em; /* 16*2em */
+	height: auto;
+	width: 1.9375em; /*62/32 */
+	text-align: right;
+	padding: 0.15625em; /*5/32*/
+	position: absolute;
+	left: 0.625em; /*20/32*/
+	bottom: 1.875em; /*60/32*/
+	border: 2px solid #202020;
+	border-radius: 10px;
+}
+
+.noPermitido
+{
+	transform: scale(.9);
+	box-shadow: none;
+	background-color: #afafa6;
+}
+
+.contactos
+{
+	margin-top: 2em;
+}
+
+.links
+{
+	text-decoration: none;
+	font-size: 2em;
+	color: #262626;
+	margin-left: .8em;
+	transition: color .3s;
+}
+.links:nth-of-type(1)
+{
+	margin-left: 0;
+}
+
+.links:hover
+{
+	color: #ed3a24;
+}
+
+@keyframes agujaPlay
+{
+	from
+	{
+		transform: rotate(0);
+	}
+	to
+	{
+		transform: rotate(20deg);
+	}
+}
+
+@keyframes rotarDisco
+{
+	from
+	{
+		transform: rotate(0);
+	}
+	to
+	{
+		transform: rotate(360deg);
+	}
+}
